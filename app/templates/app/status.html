@@ -1,0 +1,117 @@
+
+<br>
+{% if request.user.is_staff %}
+<div class="row">
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="total-orders">
+			  	<div class="card-header">
+			  		<h4>Customers <i class="fas fa-users"></i></h4>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{total_customers}} </h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+    <div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="orders-pending">
+			  	<div class="card-header">
+			  		<h5 class="card-title">Total Applications</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{total_orders}}</h3>
+			  	</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="orders-delivered">
+			  	<div class="card-header">
+			  		<h4>Published Applications <i class="fas fa-application"></i></h4>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{p}}</h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="orders-pending">
+			  	<div class="card-header">
+			  		<h5 class="card-title">Application on Process</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{w}}</h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+		 
+</div>
+{% else %}
+ <br>
+ <div class="row">
+    <div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="orders-pending">
+			  	<div class="card-header">
+			  		<h5 class="card-title">Total Applications</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{total_orders}}</h3>
+			  	</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="orders-delivered">
+			  	<div class="card-header">
+			  		<h4>Published Applications <i class="fas fa-application"></i></h4>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{p}}</h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="orders-pending">
+			  	<div class="card-header">
+			  		<h5 class="card-title">Application on Process</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{w}}</h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+		  
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="total-orders">
+			  	<div class="card-header">
+			  		<h4>Pending Applications</i></h4>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{np}} </h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endif %}
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	  <script type="text/javascript" src="js/propeller.min.js"></script> 
+	    <script src="https://account.snatchbot.me/script.js"></script><script>window.sntchChat.Init(144947)</script>

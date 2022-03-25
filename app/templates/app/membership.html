@@ -1,0 +1,56 @@
+{%  extends 'app/home.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+	.profile-pic{
+		max-width: 200px;
+		max-height:200px;
+		margin: 0 auto;
+		border-radius: 50%;
+	}
+</style>
+
+<br>
+<div class="row">
+	<div class="col-md-3">
+		<div class="card card-body">
+			<a class="btn btn-warning" href="{% url 'home' %}"> &#8592; Back to Profile</a>
+			<hr>
+			<h3 style="text-align: center">MemberShip</h3>
+			<hr>
+			<img class="profile-pic" src="{{request.user.customer.profile_pic.url}}" >
+		
+		</div>
+
+	</div>
+	<div class="col-md-9">
+		<div class="card card-body">
+			<a class="btn btn-warning" href="">  MemberShip Details</a><br>
+		<form method="POST" action="" enctype="multipart/form-data">
+				{% csrf_token %}
+				Name        : {{request.user.customer.name}}<br>
+				<br>
+				Gender       : {{request.user.customer.gender}}<br>
+				<br>
+				Age       : {{request.user.customer.age}}<br>
+				<br>
+				Email       : {{request.user.customer.email}}<br>
+				<br>
+				Phone       : {{request.user.customer.phone}}<br>
+				<br>
+				MemberShip  : {{request.user.customer.membership}}<br>
+				<br>
+				 
+			</form>
+		</div>
+	</div>
+
+
+
+{% endblock %}
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	  <script type="text/javascript" src="js/propeller.min.js"></script>
+	    <script src="https://account.snatchbot.me/script.js"></script><script>window.sntchChat.Init(144947)</script> 
